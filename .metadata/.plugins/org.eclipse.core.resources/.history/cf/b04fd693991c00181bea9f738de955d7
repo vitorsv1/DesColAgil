@@ -3,6 +3,7 @@ package br.pro.hashi.ensino.desagil.tequilada;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String args[]){
@@ -12,8 +13,14 @@ public class Main {
 		/* O código estava dando erro no arquivo Labitinto.java
 		 * Por isso deixei ele no Main para rodar sem aviso de erro
 		 */
+		
+		//Endereço 
+		//C:\Users\vitor\Dropbox\Insper\2018.1\Desenvolvimento Colab Agil\DesColAgil\VitorSatyro\labirinto.txt
 
-		String nomeArq = "labirinto.txt";
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Informe o endereço com nome do arquivo:\n");
+		String nomeArq = scanner.nextLine();
 
 		try{
 

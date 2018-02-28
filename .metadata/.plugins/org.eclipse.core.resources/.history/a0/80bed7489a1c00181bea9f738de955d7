@@ -7,7 +7,12 @@ import java.util.Scanner;
 
 public class Labirinto {
 
-	String nomeArq = "labirinto.txt";
+	//C:\Users\vitor\Dropbox\Insper\2018.1\Desenvolvimento Colab Agil\DesColAgil\VitorSatyro\labirinto.txt
+
+	Scanner scanner = new Scanner(System.in);
+
+	System.out.println("Informe o endereço e nome do arquivo:\n");
+	String nomeArq = scanner.nextLine();
 
 	try{
 
@@ -25,7 +30,7 @@ public class Labirinto {
 
 			//Adicionando cada palavra da linha em um Array
 			letras = primeiraLinha.toCharArray();
-			for(int l = 0; l < letras.length; l++){
+			for(int l = 0; l < letras.length;l++){
 				if(letras[l] == '#'){
 					letras[l] = 'X';
 				}
