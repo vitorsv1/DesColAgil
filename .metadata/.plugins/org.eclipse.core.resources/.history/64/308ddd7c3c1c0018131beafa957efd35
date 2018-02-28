@@ -1,0 +1,49 @@
+package br.pro.hashi.ensino.desagil.tequilada;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String args[]){
+
+		//System.out.println("Projeto 1");
+
+		//C:\Users\vitor\Dropbox\Insper\2018.1\Desenvolvimento Colab Agil\DesColAgil\VitorSatyro\labirinto.txt
+		
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Informe o endereço e nome do arquivo:\n");
+		String nomeArq = scanner.nextLine();
+
+		System.out.println("O arquivo possui:\n");
+		
+		try{
+			
+			FileReader arquivo = new FileReader(nomeArq);
+			BufferedReader lerArq = new BufferedReader(arquivo);
+			
+			String primeiraLinha = lerArq.readLine();
+			while(primeiraLinha != null){
+				primeiraLinha = lerArq.readLine();
+				System.out.printf("%s\n", primeiraLinha);
+				
+			}
+		
+		arquivo.close();
+			
+		} catch (IOException e){
+			
+			for (int i = 0; i < 100; ++i){
+				System.out.println();
+			}
+			       
+			System.out.printf("Erro ao abrir o arquivo", e.getMessage());
+		
+		}
+
+		System.out.println();
+		
+	}
+}
